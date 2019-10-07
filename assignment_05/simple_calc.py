@@ -3,6 +3,9 @@
 --------------------------------------------------------------------------
 Simple Calculator
 --------------------------------------------------------------------------
+Authors:
+Erik Welsh, Annabel Chang
+
 License:   
 Copyright 2019 Erik Welsh
 
@@ -32,18 +35,15 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------
-
-Simple calculator that will do +, -, *, / and pow
+Simple calculator that will do +, -, *, /, >>, <<, %, and pow
   - Take in two numbers 
   - Take in an operator 
   - Perform calculation and output result 
   - Repeat
-
 Error conditions:  
   - Invalid calculation  
   - Invalid number  
   - Invalid operator  
-
   --> Results in program exit
 --------------------------------------------------------------------------
 """
@@ -71,7 +71,7 @@ operators = {
 # Functions
 # ------------------------------------------------------------------------
 def get_user_input():    
-""" Will return (number, number, operator) or (None, None, None) on error"""    
+  """ Will return (number, number, operator) or (None, None, None) on error"""
   try:
       input = raw_input
   except NameError:
@@ -79,8 +79,11 @@ def get_user_input():
   try:        
     number1 = float(input("Enter the first number:  "))        
     number2 = float(input("Enter the second number: "))        
-    op      = input("Enter an operator (valid operators are +, -, *, and /): ")        
-    return (number1, number2, op)    
+    op      = input("Enter an operator (valid operators are +, -, *, /, >>, <<, %, and **): ")        
+    if op == ">>" or op == "<<":
+        return (int(number1), int(number2), op)
+    else:
+        return (number1, number2, op)    
   except Exception as e:         
     print(e)        
     print("Invalid Input!")        
