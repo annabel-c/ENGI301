@@ -60,7 +60,11 @@ operators = {
   "+" : operator.add,    
   "-" : operator.sub,    
   "*" : operator.mul,    
-  "/" : operator.truediv
+  "/" : operator.truediv,
+  ">>" : operator.rshift,
+  "<<" : operator.lshift,
+  "%" : operator.mod,
+  "**" : operator.pow,
 }
 
 # ------------------------------------------------------------------------
@@ -68,6 +72,10 @@ operators = {
 # ------------------------------------------------------------------------
 def get_user_input():    
 """ Will return (number, number, operator) or (None, None, None) on error"""    
+  try:
+      input = raw_input
+  except NameError:
+      pass
   try:        
     number1 = float(input("Enter the first number:  "))        
     number2 = float(input("Enter the second number: "))        
