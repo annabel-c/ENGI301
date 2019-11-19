@@ -37,9 +37,21 @@ Clock
   - Servo connected to PWM0 (P1_36)
   - Buzzer connected to PWM1 (P2_1)
   - Mode button connected to Pin 64 (P1_20)
-  - Up button connected to Pin 46 (P1_22)
-  - Down button connected to Pin 48 (P1_24)
+  - Hour button connected to Pin 46 (P1_22)
+  - Minute button connected to Pin 48 (P1_24)
 
+--------------------------------------------------------------------------
+
+Create a sun clock with screen display of time and servo motor that 
+shows the position of the sun; has set and toggle alarm functions
+
+Purpose:
+  - Screen displays real time
+  - Sets alarm time while mode button is held
+  - Increment the alarm hour by one each time the hour button is pressed
+  - Increment the alarm minute by one each time the minute button is pressed
+  - Toggle alarm on/off by simultaneously pressing hour and minute buttons
+  - Buzzer sounds at alarm time then turns off alarm
 """
 # ------------------------------------------------------------------------
 # Libraries
