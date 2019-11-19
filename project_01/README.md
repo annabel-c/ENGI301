@@ -75,11 +75,11 @@ With everything set up, running
 
 sudo python3 sun_clock.py
 
-in the current directory should produce the clock display and functions as described in the first section. An auto run is also set up for this project such that the file runs upon boot.
+in the current directory should produce the clock display and functions as described in the first section. An auto run is also set up for this project such that the file runs upon boot, given in run.sh.
 
 A video demonstrating how the alarm works can be reached here: https://www.youtube.com/watch?v=hUiSdnFPSFs&feature=youtu.be
 
-The current time is 03:22, the alarm is set to 03:23 by holding the mode button and pressing the minute button (not shown setting from the initial 00:00 due to time constraints), the alarm is turned on by pressing hour and minute together (screen border turns red), and wait.... the alarm begins beeping at the set time! The alarm eventually terminates and the gray screen border is restored.
+In the video, the current time is 03:22, the alarm is set to 03:23 by holding the mode button and pressing the minute button (not shown setting from the initial 00:00 due to time constraints), the alarm is turned on by pressing hour and minute together (screen border turns red), and wait.... the alarm begins beeping at the set time! The alarm eventually terminates and the gray screen border is restored.
 
 
 
